@@ -1,4 +1,4 @@
-import { Form2 } from '../Form2'
+
 import './test.css'
 function Test() {
   return (

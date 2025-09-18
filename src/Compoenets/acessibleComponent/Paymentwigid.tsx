@@ -10,7 +10,7 @@ export const PaymentWidget: React.FC<{
     cardData: any;
   }) => void;
 }> = ({ onClickCallback }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked] = useState(false);
   const [selectedPayment, setSelectedPayment] = useState('');
   const [paymentMethodError, setPaymentMethodError] = useState('');
 

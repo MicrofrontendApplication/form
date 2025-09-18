@@ -14,7 +14,7 @@ interface AddressBlockProps {
 }
 
 export const AddressBlock: React.FC<AddressBlockProps> = ({
-  title,
+
   register,
   errors,
   clearInputField,

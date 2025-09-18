@@ -39,7 +39,7 @@ const gPayOption: PaymentOption = {
 
 const RadioButton = forwardRef<RadioButtonRef, RadioButtonProps>(
   ({ value, onChange }, ref) => {
-    const [isChecked, setIsChecked] = useState(false);
+    
     const [options, setOptions] = useState<PaymentOption[]>([
       {
         id: 'PayPal',
@@ -58,7 +58,7 @@ const RadioButton = forwardRef<RadioButtonRef, RadioButtonProps>(
       },
     ]);
 
-    const [cardData, setCardData] = useState<CardData>({
+    const [cardData] = useState<CardData>({
       cardNumber: '',
       expiryDate: '',
       cvv: '',
@@ -69,7 +69,7 @@ const RadioButton = forwardRef<RadioButtonRef, RadioButtonProps>(
       expiryDate: '',
       cvv: '',
     });
-
+console.log('errors',errors)
     useImperativeHandle(ref, () => ({
       getCardData: () => {
         if (value === 'CreditCard') {
@@ -95,12 +95,6 @@ const RadioButton = forwardRef<RadioButtonRef, RadioButtonProps>(
         event.preventDefault();
         onChange(optionId);
       }
-    };
-
-    const handleCardChange = (field: keyof CardData, value: string) => {
-      const updatedCard = { ...cardData, [field]: value };
-      setCardData(updatedCard);
-      validateCardData(false, updatedCard);
     };
 
     const validateCardData = (validateEmpty: boolean, data: CardData = cardData) => {
