@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: blue;
+    max-width: 400px;
+
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+
+@media (min-width: 640px) {
+    .container {
+      max-width: 680px;
+      background-color: aliceblue;
+      min-width: 650px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+        background-color: bisque;
+          min-width: 786px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1250px;
+        background-color: violet;
+          min-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1300px;
+        background-color: turquoise;
+
+          min-width: 1280px;
+    }
+}

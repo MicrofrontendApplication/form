@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+:root {
+  --bg: #f4f4f4;
+  --text: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    --bg: #121212;
+    --text: #ffffff;
+  }
+
+}

@@ -1,0 +1,86 @@
+
+
+.nameFieldsContainer {
+  display: flex;
+}
+
+.nameFieldsContainer > :first-child {
+  flex: 1;
+}
+
+.nameFieldsContainer > :last-child {
+  flex: 3;
+}
+
+.Personal > :first-child {
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.Personal div {
+
+  margin-bottom: 0px !important;
+}
+
+.address {
+  display: flex;
+  margin-top: 10px;
+
+}
+
+.address > :first-child {
+  flex: 3;
+}
+
+.address > :last-child {
+  flex: 1;
+}
+
+
+
+.addressForm {
+  display: flex;
+}
+
+.addressForm > :first-child {
+  flex: 1;
+}
+
+.addressForm > :last-child {
+  flex: 3;
+}
+
+.inputRow {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.addresssubheading {
+//   font-weight: bold;
+//   font-size: large;
+  margin-top: 15px;
+  border: none;
+  background-color: transparent;
+  color: var(--button_text_color);
+}
+
+.expandableContainer {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.open {
+  max-height: none;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closed {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.error_message {
+  color:red ;
+}

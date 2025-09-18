@@ -1,0 +1,295 @@
+
+
+.nameFieldsContainer {
+  display: flex;
+}
+
+.nameFieldsContainer > :first-child {
+  flex: 1;
+}
+
+.nameFieldsContainer > :last-child {
+  flex: 3;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  margin-top: 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #000000e1;
+}
+
+.dropdownContainer label {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.Personal > :first-child {
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.Personal div {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+
+.address {
+  display: flex;
+  margin-top: 10px;
+
+}
+
+.address > :first-child {
+  flex: 3;
+}
+
+.address > :last-child {
+  flex: 1;
+}
+
+.datePicker h6 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 25px;
+}
+
+.datePicker p {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.datePickerContainer {
+  position: relative;
+  margin-top: 10px;
+}
+
+.addressForm {
+  display: flex;
+}
+
+.addressForm > :first-child {
+  flex: 1;
+}
+
+.addressForm > :last-child {
+  flex: 3;
+}
+
+.inputRow {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.addresssubheading {
+  font-weight: bold;
+  font-size: large;
+  margin-top: 15px;
+  border: none;
+  background-color: transparent;
+  color: var(--button_text_color);
+}
+
+.expandableContainer {
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.open {
+  max-height: none;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closed {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.error_message {
+  color:red ;
+}
+
+
+
+//This is the redio button css 
+
+.optionsContainer {
+  display: flex;
+ gap:1rem;
+}
+
+.optionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 50%;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  text-align: center;
+  position: relative;
+  height: 130px;
+}
+
+.selected {
+  border-color: green;
+}
+
+.radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-bottom: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.radio:checked::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  border-radius: 50%;
+}
+
+.tipBadge {
+  background-color: #ffc107;
+  color: #000;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+
+.listContainer {
+  padding-left: 1rem;
+  margin-top: 50px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem; // space between lines
+  line-height: 1.6;
+}
+
+.item::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green;
+  font-weight: bold;
+}
+
+
+//This is checkbox css 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkboxWrapper input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.checkboxWrapper input[type='checkbox']:checked {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.checkboxWrapper input[type='checkbox']:checked::after {
+  content: '✔';
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+}
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.amountInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+

@@ -1,0 +1,60 @@
+
+.datePickerContainer {
+  position: relative;
+  margin-top: 10px;
+}
+
+
+.error_message {
+  color:red ;
+}
+
+.toggleSwitch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  .toggleInput {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:focus + .slider {
+      outline: 2px solid #005fcc;
+      outline-offset: 2px;
+    }
+
+    &:checked + .slider {
+      background-color: #2196f3;
+    }
+
+    &:checked + .slider::before {
+      transform: translateX(20px);
+    }
+  }
+
+  .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+}

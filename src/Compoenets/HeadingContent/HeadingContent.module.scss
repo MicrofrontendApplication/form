@@ -1,0 +1,15 @@
+.horizontaline {
+  border: none;
+  height: 3px;
+  background-color: rgb(0, 0, 0) !important; // you can change this to any color you want
+  margin: 16px 0;
+  width: 100%;
+}
+
+.headingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}

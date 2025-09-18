@@ -1,0 +1,47 @@
+
+
+
+.box {
+  padding: 20px;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 1. Fixed width */
+.fixed-width {
+  background-color: #e63946;
+  width: 400px;
+}
+
+/* 2. Max width */
+.max-width {
+  background-color: #457b9d;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* 3. Min width */
+.min-width {
+  background-color: #2a9d8f;
+  width: 100%;
+  min-width: 300px;
+}
+
+/* Media Query for screens <= 500px */
+@media (max-width: 500px) {
+  .fixed-width {
+    width: 400px; /* still 400px (might overflow!) */
+  }
+
+  .max-width {
+    width: 100%; /* will shrink */
+    max-width: 600px;
+  }
+
+  .min-width {
+    width: 100%; /* BUT stays at least 300px */
+    min-width: 300px;
+  }
+}
