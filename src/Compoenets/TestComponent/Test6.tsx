@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 function Test6() {
   const [formData, setFormData] = useState({
