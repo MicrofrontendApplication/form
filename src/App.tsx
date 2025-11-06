@@ -3,15 +3,15 @@ import "./App.css";
 import "microfrontend/microfrontend.min.css";
 import { useState } from "react";
 
-import HeadingContent from "./Compoenets/HeadingContent";
-import { NachsendungForm } from "./Compoenets/Nachsendung";
+// import HeadingContent from "./Compoenets/HeadingContent";
+// import { NachsendungForm } from "./Compoenets/Nachsendung";
 
-import { Form2 } from "./Compoenets/Form2";
+// import { Form2 } from "./Compoenets/Form2";
 
 import "./App.css";
 
 function App() {
-  const [selected, setSelected] = useState<"privat" | "geschäftlich">("privat");
+  // const [selected, setSelected] = useState<"privat" | "geschäftlich">("privat");
 
 
   const [address, setAddress] = useState({
