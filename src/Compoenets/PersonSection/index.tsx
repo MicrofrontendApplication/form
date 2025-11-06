@@ -41,6 +41,7 @@ export const PersonSection: React.FC<PersonSectionProps> = ({
                         onClear={() => clearInputField("Vorname")}
                         aria-invalid={!!errors.Vorname}
                         aria-describedby={errors.Vorname ? "error-Vorname" : undefined}
+                        
                     />
                     {errors.Vorname && (
                         <div id="error-Vorname" className={styles.error_message} role="alert">

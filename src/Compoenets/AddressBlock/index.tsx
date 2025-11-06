@@ -49,6 +49,7 @@ export const AddressBlock: React.FC<AddressBlockProps> = ({
               onClear={() => clearInputField("PLZ")}
               // aria-invalid={!!errors.PLZ}
               aria-describedby={errors.PLZ ? "error-PLZ" : undefined}
+              autoComplete="postal-code"
             />
             {errors.PLZ && (
               <div id="error-PLZ" className={styles.error_message} role="alert">
@@ -80,6 +81,12 @@ export const AddressBlock: React.FC<AddressBlockProps> = ({
           </div>
         </div>
 
+            {/* another changes  */}
+
+            
+
+
+
         {/* Street and Number */}
         <div
           className={styles.address}
@@ -102,6 +109,7 @@ export const AddressBlock: React.FC<AddressBlockProps> = ({
               onClear={() => clearInputField("StraBe")}
               aria-invalid={!!errors.StraBe}
               aria-describedby={errors.StraBe ? "error-StraBe" : undefined}
+              autoComplete="address-level2"
             />
             {errors.StraBe && (
               <div
@@ -131,6 +139,7 @@ export const AddressBlock: React.FC<AddressBlockProps> = ({
               onClear={() => clearInputField("Nr")}
               aria-invalid={!!errors.Nr}
               aria-describedby={errors.Nr ? "error-Nr" : undefined}
+               autoComplete="address-line1"
             />
             {errors.Nr && (
               <div id="error-Nr" className={styles.error_message} role="alert">

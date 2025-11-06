@@ -33,6 +33,20 @@ export const NachsendungForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<INachsendungFormInput> = (data: any) => {
     console.log("data", data);
+
+    // copy your form values to hidden native form
+    (document.getElementById("native-strasse") as HTMLInputElement).value =
+      data.strasse;
+    (document.getElementById("native-stadt") as HTMLInputElement).value =
+      data.stadt;
+    (document.getElementById("native-plz") as HTMLInputElement).value =
+      data.plz;
+
+    // trigger native submit to make Chrome show the popup
+    const nativeForm = document.getElementById("nativeForm") as HTMLFormElement | null;
+    if (nativeForm) {
+      nativeForm.submit(); // ✅ now TypeScript knows it's a form
+    }
   };
 
   const clearInputField = (fieldName: keyof INachsendungFormInput) => {
@@ -51,6 +65,7 @@ export const NachsendungForm: React.FC = () => {
       onSubmit={handleSubmit(onSubmit)}
       aria-labelledby="form-title"
       role="form"
+
     >
       <h1 id="form-title" className="visually-hidden">
         Nachsendungsauftrag Formular
@@ -61,7 +76,7 @@ export const NachsendungForm: React.FC = () => {
         control={control}
         errors={errors}
         options={options}
-       
+
       />
 
       <AddressBlock
@@ -104,7 +119,7 @@ export const NachsendungForm: React.FC = () => {
         register={register}
         errors={errors}
         initialToggleState={false}
-        clearInputField={() => {}}
+        clearInputField={() => { }}
       />
 
       {/* Order Summary Component */}

@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
+import { visualizer } from "rollup-plugin-visualizer";
+
 
 export default defineConfig({
   plugins: [
     react(),
+    visualizer({
+      filename: "bundle-report.html",
+      open: true,  // auto-open in browser
+      gzipSize: true,  // show gzip size
+      brotliSize: true, // show brotli size
+    }),
     federation({
       name: 'Form',
       filename: 'remoteEntry.js',
@@ -29,5 +37,6 @@ export default defineConfig({
     target: "esnext",
     minify: false,
     // cssCodeSplit: true
+   
   },
 })
