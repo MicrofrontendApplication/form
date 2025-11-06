@@ -1,7 +1,6 @@
 import "./App.css";
 
 import "microfrontend/microfrontend.min.css";
-import { useState } from "react";
 
 // import HeadingContent from "./Compoenets/HeadingContent";
 // import { NachsendungForm } from "./Compoenets/Nachsendung";
@@ -9,35 +8,18 @@ import { useState } from "react";
 // import { Form2 } from "./Compoenets/Form2";
 
 import "./App.css";
+import Test5 from "./Compoenets/TestComponent/Test5";
+import Test6 from "./Compoenets/TestComponent/Test6";
+import { useState } from "react";
+import Test7 from "./Compoenets/TestComponent/Test7";
 
 function App() {
   // const [selected, setSelected] = useState<"privat" | "geschäftlich">("privat");
+    const [selected, setSelected] = useState<"c1" | "c2" | "c3">("c1");
 
 
-  const [address, setAddress] = useState({
-    strasse: "",
-    stadt: "",
-    plz: "",
-  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAddress({ ...address, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // prevent SPA navigation
-
-    // copy values to hidden form
-    (document.getElementById("native-strasse") as HTMLInputElement).value =
-      address.strasse;
-    (document.getElementById("native-stadt") as HTMLInputElement).value =
-      address.stadt;
-    (document.getElementById("native-plz") as HTMLInputElement).value =
-      address.plz;
-
-    // submit hidden form to trigger Chrome popup
-    (document.getElementById("nativeForm") as HTMLFormElement)?.submit();
-  };
   return (
     <>
       {/* <div className="container">
@@ -76,56 +58,52 @@ function App() {
         </div>
 
       </div> */}
+    <div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            name="comp"
+            value="c1"
+            checked={selected === "c1"}
+            onChange={() => setSelected("c1")}
+          />
+          Comp 1
+        </label>
 
+        <label>
+          <input
+            type="radio"
+            name="comp"
+            value="c2"
+            checked={selected === "c2"}
+            onChange={() => setSelected("c2")}
+          />
+          Comp 2
+        </label>
 
-      <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-        <h1>Adresse speichern Demo</h1>
-        <form onSubmit={handleSubmit} autoComplete="on">
-          <div>
-            <label>Straße:</label>
-            <input
-              name="strasse"
-              autoComplete="address-line1"
-              value={address.strasse}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>Stadt:</label>
-            <input
-              name="stadt"
-              autoComplete="address-level2"
-              value={address.stadt}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label>PLZ:</label>
-            <input
-              name="plz"
-              autoComplete="postal-code"
-              value={address.plz}
-              onChange={handleChange}
-            />
-          </div>
-          <button type="submit" style={{ marginTop: "10px" }}>
-            Speichern
-          </button>
-        </form>
-
-        {/* Hidden native form to trigger Chrome save popup */}
-        <form
-          id="nativeForm"
-          method="POST"
-          action="https://httpbin.org/post"
-          style={{ display: "none" }}
-          autoComplete="on"
-        >
-          <input id="native-strasse" name="address-line1" />
-          <input id="native-stadt" name="address-level2" />
-          <input id="native-plz" name="postal-code" />
-        </form>
+        <label>
+          <input
+            type="radio"
+            name="comp"
+            value="c3"
+            checked={selected === "c3"}
+            onChange={() => setSelected("c3")}
+          />
+          Comp 3
+        </label>
       </div>
+
+      <div style={{marginTop:20}}>
+        {selected === "c1" && <Test5 />}
+        {selected === "c2" && <Test6 />}
+        {selected === "c3" && <Test7 />}
+      </div>
+    </div>
+
+    
+
+
     </>
   );
 }
